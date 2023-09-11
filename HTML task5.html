@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <title>HTML Task 5</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 200px;
+        }
+
+        table.center {
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="user-form" action="thankyou5.html">
+        <h1>
+            HTML Task 5
+        </h1>
+        <h2 style="color: blue; margin-top: 50px; margin-left: 700px;">
+            Registration Form
+        </h2>
+        <table class="center" style="width:auto">
+
+            <tr>
+                <td><b>FirstName</b></th>
+                <td><input type="text" style="width: 500px;"></td>
+            </tr>
+
+            <tr>
+                <td><b>LastName</b></th>
+                <td><input type="text" style="width: 500px;"></td>
+            </tr>
+
+            <tr>
+                <td><b>Email</b></th>
+                <td><input type="text" style="width: 500px;"></td>
+            </tr>
+
+            <tr>
+                <td><b>Password</b></th>
+                <td><input type="password" style="width: 500px;"></td>
+            </tr>
+
+            <tr>
+                <td><b>Re-enter Password</b></th>
+                <td><input type="password" style="width: 500px;"></td>
+            </tr>
+
+            <tr>
+                <td><label for="gender"><b>Gender:</b></label></th>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male <br>
+                    <input type="radio" name="gender" value="female"> Female
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Age</b></th>
+                <td><input type="number" style="width: 500px;"></td>
+            </tr>
+
+            <tr>
+                <td><b>Phone number</b></th>
+                <td><input type="number" style="width: 500px;"></td>
+            </tr>
+
+            <tr>
+                <td><b>Address</b></th>
+                <td><input type="text" style="width: 500px; height: 70px;"></td>
+            </tr>
+
+            <tr>
+                <td><b>State</b></th>
+                <td><input type="text" style="width: 500px;"></td>
+            </tr>
+
+            <tr>
+                <td><b>Country</b></th>
+                <td><select id="country" name="country">
+                        <option value="none" selected>None</option>
+                        <option value="usa">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="australia">Australia</option>
+                        <option value="india">India</option>
+                        <option value="germany">Germany</option>
+                        <option value="france">France</option>
+                        <option value="japan">Japan</option>
+                        <option value="brazil">Brazil</option>
+                        <option value="china">China</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Languages Known</b></th>
+                <td>
+                    <input type="checkbox">English
+                    <input type="checkbox">Telugu
+                    <input type="checkbox">Hindi
+                    <input type="checkbox">Kannada
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox">Hereby I declare all the given details are true
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <p style="padding-left: 540px;">Log in to
+                        <a href="https://ethnus.com/" target="_self">
+                            Ethnus
+                        </a>
+                        website
+                    </p>
+            </tr>
+        </table>
+
+        <input style="margin-left: 700px; margin-top: 20px;" type="submit" value="Register">
+
+    </form>
+</body>
+
+</html>
