@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsTask1</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="text"], input[type="button"] {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* Style for the button */
+        input[type="button"] {
+            background-color: #007BFF; /* Blue color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Hover effect for the button */
+        input[type="button"]:hover {
+            background-color: #0056b3; /* Darker blue color on hover */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function reverse() {
+            var input = Number(document.form.num.value);
+            var sum = 0;
+            while (input > 0) {
+                sum = sum * 10 + input % 10;
+                input = Math.floor(input / 10);
+            }
+            document.getElementById("result").innerHTML = "Reversed number: " + sum;
+        }
+    </script>
+    <form name="form">
+        Enter a number: <input type="text" name="num"><br>
+        <input type="button" onclick="reverse()" value="Output">
+    </form>
+    <div id="result"></div>
+</body>
+</html>

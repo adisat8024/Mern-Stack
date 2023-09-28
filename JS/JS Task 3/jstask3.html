@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsTask3</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="text"], input[type="button"] {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* Style for buttons */
+        input[type="button"] {
+            background-color: #007BFF; /* Blue color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Hover effect for buttons */
+        input[type="button"]:hover {
+            background-color: #0056b3; /* Darker blue color on hover */
+        }
+
+        #result-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form name="form">
+        1st Number: <input style="margin-left: 10px;" type="text" name="num1"><br>
+        2nd Number: <input type="text" name="num2"><br>
+        <input type="button" value="Multiply" onclick="multiply()">
+        <input type="button" value="Divide" onclick="divide()"><br>
+    </form>
+    <div id="result-container">
+        <p>The Result Is:</p>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function multiply() {
+            var input1 = Number(document.form.num1.value);
+            var input2 = Number(document.form.num2.value);
+            var a = input1 * input2;
+            document.getElementById("result").innerHTML = a;
+        }
+
+        function divide() {
+            var input1 = Number(document.form.num1.value);
+            var input2 = Number(document.form.num2.value);
+            var a = input1 / input2;
+            document.getElementById("result").innerHTML = a;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsTask2</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="text"], input[type="button"] {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* Style for the button */
+        input[type="button"] {
+            background-color: #007BFF; /* Blue color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Hover effect for the button */
+        input[type="button"]:hover {
+            background-color: #0056b3; /* Darker blue color on hover */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function reverse() {
+            var input1 = document.form.string.value;
+            var input = input1.toLowerCase();
+            var re = "";
+            var arr1 = new Array();
+            for (var i = 0; i < input.length; ++i) {
+                arr1[i] = input.charAt(i);
+            }
+            arr1.sort();
+            for (var j = 0; j < arr1.length; ++j) {
+                re = re + arr1[j];
+            }
+            document.getElementById("result").innerHTML = "Letters in alphabetical order: " + re;
+        }
+    </script>
+    <form name="form">
+        Enter a string: <input type="text" name="string"><br>
+        <input type="button" onclick="reverse()" value="Output">
+    </form>
+    <div id="result"></div>
+</body>
+</html>
