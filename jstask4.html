@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsTask4</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="button"] {
+            padding: 10px 20px;
+            background-color: #007BFF; 
+            color: white;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3; 
+            border: 2px solid #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function date() {
+            var d, date, month, year;
+            d = new Date();
+            date = d.getDate();
+            month = d.getMonth();
+            year = d.getFullYear();
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.getElementById("result1").innerHTML = date + "/" + months[month] + "/" + year;
+        }
+
+        function Time() {
+            var d, date, month, year;
+            d = new Date();
+            document.getElementById("result2").innerHTML = d;
+        }
+    </script>
+    <form name="myform">
+        <input type="button" value="Show Date" onclick="date()">
+        <p id="result1"></p><br>
+        <input type="button" value="Show Time" onclick="Time()">
+        <p id="result2"></p><br>
+    </form>
+</body>
+</html>
